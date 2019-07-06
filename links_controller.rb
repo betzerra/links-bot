@@ -35,7 +35,7 @@ class LinksController
 
   def handle_data(data)
     @logger.debug("Received data: #{data.inspect}")
-    return if data['message']
+    return unless data['message']
 
     message = data['message']
 
